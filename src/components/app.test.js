@@ -19,7 +19,7 @@ describe('App', () => {
     expect(app.find('button').at(1).text()).toEqual('Clear Notes')
   })
 
-  /// ///////// second, inside of the mounting og App, I make a group
+  /// ///////// second, inside of the mounting on App, I make a group
   /// ///////// of all things inside of the form. Making a group keeps
   /// ///////// this cleaner for coverage
   describe('when rendering the form', () => {
@@ -57,10 +57,35 @@ describe('App', () => {
         app.find('button').at(0).simulate('click')
       })
 
-      it('adds the new to state', () => {
-        // console.log(app.state())
+      /// /// his is to avoid duplicates in state for app2 //////
+      afterEach(() => {
+        app.find('button').at(1).simulate('click')
+      }) // this doesn't affect to the it just down below
+      /// //////////////////////////////////////////////////////
+
+      it('adds the new note to the state', () => {
+        console.log(app.state())
         expect(app.state().notes[0].text).toEqual(testNote)
       })
+
+      /// /////////////////////////////////////////////////////
+      // just when we send a new note, we re-mount the
+      // the component to write in the localstore
+      // we mount the component in a second vairable to test it
+
+      describe('and remounting the component', () => {
+        let app2
+
+        beforeEach(() => {
+          app2 = mount(<App />)
+        })
+
+        it('reads the stored note cookies', () => {
+          expect(app2.state().notes).toEqual([{ text: testNote }])
+        })
+      })
+
+      /// /////////////////////////////////////////////////////
 
       describe('and clicking the clear button', () => {
         beforeEach(() => {
