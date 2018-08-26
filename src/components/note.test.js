@@ -2,19 +2,31 @@ import React from 'react'
 import { mount } from 'enzyme'
 import Note from './note'
 
-// const props = { note: { text: 'test note' } }
-// using destructuring, we can write the component like this:
-// let note = mount(<Note {...props} />)
+let wrapped
+// we define an global variable to containt element to mount
+
+beforeEach(() => {
+  wrapped = mount(<Note note={{ text: 'test note' }} />)
+  /*
+    Another way to do this is, using destructuring:
+
+    const props = { note: { text: 'test note' } }
+    wrapped = mount(<Note {...props} />)
+  */
+})
+
+afterEach(() => {
+  wrapped = mount(<Note note={{ text: 'test note' }} />)
+})
 
 describe('Note', () => {
-  let note = mount(<Note note={{ text: 'test note' }} />)
-  // first, we mount the component with the props that
-  // you need to pass to the component
+  /*
+    why { text: 'test note' } => we have to find text as a Jquery selector
+    and this is the way woth Enzyme to define it.
+  */
 
-  // if you want to render the mounted component in the
-  // test enviroment, you have to call console and debug it
   it('renders the note text', () => {
-    // console.log(note.debug())
-    expect(note.find('p').text()).toEqual('test note')
+    // console.log(note.debug())  => log the component to show it on console
+    expect(wrapped.find('p').text()).toEqual('test note')
   })
 })
