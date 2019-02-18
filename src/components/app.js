@@ -22,9 +22,14 @@ class App extends Component {
 
   submit = () => {
     const { notes, text } = this.state
+    /* no mutating data
     notes.push({ text })
     this.setState({ notes })
     bakeCookie(cookieKey, this.state.notes)
+    */
+    // mutating data
+    this.setState({ notes: [...notes, { text }] })
+    bakeCookie(cookieKey, [...notes, { text }])
   }
 
   clear = () => {
