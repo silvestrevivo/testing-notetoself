@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1535397453810" clover="3.2.0">
-  <project timestamp="1535397453810" name="All files">
+<coverage generated="1550487428943" clover="3.2.0">
+  <project timestamp="1550487428943" name="All files">
     <metrics statements="19" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="8" elements="28" coveredelements="26" complexity="0" loc="19" ncloc="19" packages="2" files="3" classes="3">
       <package name="testing-notetoself">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <file name="setupTests.js" path="/Volumes/external/werk/2017/12_testing/testing-notetoself/setupTests.js">
+        <file name="setupTests.js" path="/Users/silvestrevivo/Sync/werk/2017/12_testing/testing-notetoself/setupTests.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
           <line num="5" count="2" type="stmt"/>
           <line num="6" count="0" type="stmt"/>
@@ -13,7 +13,7 @@
       </package>
       <package name="testing-notetoself.src.components">
         <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
-        <file name="app.js" path="/Volumes/external/werk/2017/12_testing/testing-notetoself/src/components/app.js">
+        <file name="app.js" path="/Users/silvestrevivo/Sync/werk/2017/12_testing/testing-notetoself/src/components/app.js">
           <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
           <line num="10" count="1" type="stmt"/>
           <line num="19" count="11" type="stmt"/>
@@ -29,7 +29,7 @@
           <line num="42" count="3" type="stmt"/>
           <line num="46" count="4" type="stmt"/>
         </file>
-        <file name="note.js" path="/Volumes/external/werk/2017/12_testing/testing-notetoself/src/components/note.js">
+        <file name="note.js" path="/Users/silvestrevivo/Sync/werk/2017/12_testing/testing-notetoself/src/components/note.js">
           <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="4" count="2" type="stmt"/>
           <line num="5" count="5" type="stmt"/>
